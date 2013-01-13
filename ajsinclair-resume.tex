@@ -9,9 +9,9 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[11pt,letterpaper,final]{moderncv}
+\documentclass[12pt,letterpaper,final]{moderncv}
 \usepackage{fontspec}
-\moderncvtheme[darkred]{classic}
+\moderncvtheme[darkblue]{classic}
 
 % DOCUMENT LAYOUT
 \usepackage[scale=0.85]{geometry}
@@ -23,13 +23,13 @@
 
 % Remove % to set to different fonts
 %\setromanfont [Ligatures={Common},Numbers={OldStyle}]{Adobe Caslon Pro}
-%\setmonofont[Scale=0.8]{Monaco} 
+\setmonofont[Scale=0.8]{Monaco} 
 
 % ---- CUSTOM AMPERSAND
 \newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&}}
 
 % ---- MARGIN YEARS
-%\newcommand{\years}[1]{\marginpar{\scriptsize #1}}
+\newcommand{\years}[1]{\marginpar{\scriptsize #1}}
 
 
 % PDF SETUP
@@ -37,14 +37,14 @@
 
 
 % Personal Information 
-\firstname{Michael}
-\familyname{Wright}
-\address{9500 Kingsford Dr.}{Cary, NC 27518}
-\mobile{(919) 656-4962}
-\email{mdwrigh2@ncsu.edu}
-%\homepage{www.derefnull.com/about}
+\firstname{Andrew J.}
+\familyname{Sinclair}
+\address{52 O'Connor Way}{San Luis Obispo, CA 93405}
+\mobile{(760) 473-7547}
+\email{asinclai@calpoly.edu}
+%\homepage{www.andrewjsinclair.com}
 
-\title{Michael Wright's Resume}
+\title{Andrew Sinclair's Resume}
 
 \nopagenumbers{}
 
@@ -53,46 +53,39 @@
 \maketitle
 
 \section{Education}
-\cventry{Fall 2008 - Winter 2012 (expected)}{Computer Science \& Mathematics, North Carolina State University}{Raleigh, NC}{}{Overall GPA: 3.949}{CSC \& MA Majors GPA: 4.0}
-\section{Computer Skills} 
-  \cvline{Languages:}{Python, Java, Go, JavaScript, C}
+\cventry{Fall 2008 - Winter 2014 (expected)}{Computer Science B.S./M.S.}{\newline California Polytechnic State University, }{San Luis Obispo, CA}{\newline GPA: 3.02}{
+}
+\cvline{Graduate Coursework:}{Computer Networking, Natural Language Processing}
+\section{Skills} 
+  \cvlanguage{Python}{Proficient}{Scripting, Natural Language Processing}
+  \cvlanguage{C}{Proficient}{Systems and Network Programming}
+  \cvlanguage{Java}{Familiar}{Developed tool for teachers to autogenerate tests}
+  \cvline{Other:}{Object Oriented, OSI Model, Version Control, Natural Language Toolkit, Click Modular Router}
 \section{Experience} 
-  \cventry{Summer 2012}{Software Engineering Intern}{Google}{Mountain View, CA}{}{
+  \cventry{Summer 2012}{Software Engineering Intern}{ViaSat Inc.}{Carlsbad, CA}{}{
     \begin{itemize}
-      \item Rewrote Android Virtual Device (AVD) creation and management tools to focus on physical device specifications rather than the emulator's implementation details, allowing developers to create AVDs based on existing, real-world devices.
-      \item Implemented an Android application that generated device specifications for use with the new toolset.
-      \item Worked on an internal, company-wide communication app for Android as a side-project with another intern. Its design and implementation received positive remarks from a number of people, including Matias Duarte, Director of Android UI/UX.
+      \item Ported I$^2$C bus arbitration module from VxWorks to Linux by replacing timing and serial communication code
+      \item Developed component for reporting the health of utility cards to a Network Management System
     \end{itemize}
   }
-  \cventry{Fall 2011}{Senior Design Team Lead}{Johns Hopkins University Applied Physics Lab}{}{}{
+  \cventry{Summer 2011}{Software Engineering Intern}{ViaSat Inc.}{Carlsbad, CA}{}{
     \begin{itemize}
-      \item Developed a library for seamlessly interacting with Flicker, a project that allows for running trusted code modules on top of an extremely small trusted computing base.
-      \item Implemented modules that wrap Intel's Trusted Platform Module's sealing and unsealing functionality.
-      \item Developed modules that implement RSA and a corresponding arbitrary precision math library which do not depend on libc.
+      \item Implemented Linux-based router to send traffic from virtual terminals to live network operating center
+      \item Created modules to simulate network traffic impairments such as: restricted bandwidth, increase latency and jitter, and dropped/fragmented packets
+      \item Added functionality to in-house, reusable C library
     \end{itemize}
   }
-  \cventry{Summer 2011}{Technical Solutions Engineering Intern}{Google}{Mountain View, CA}{}{
+\section{Projects}
+  \cventry{}{SoundCloud Song Ranking by Sentiment Classification of User Comments}{}{}{}{
     \begin{itemize}
-      \item Extracted ChimpChat, a Java library for interfacing with the Monkey tool, from MonkeyRunner.
-      \item Added view introspection functionality to Monkey, ChimpChat and MonkeyRunner.
-      \item Worked on an SFTP server backed by Google technologies and infrastructure, improving read performance by 4x and implementing proper access control.
+      \item Acquired comments via SoundCloud Python API. Preprocessed malformed comments.
+      \item Combined lexicon, n-gram, and other features to classify the sentiment of user comments
+      \item Validated algorithm in 167 test runs which demonstrated results better than random rank selection
     \end{itemize}
   }
-  \cventry{May 2010 --\\January 2011}{Research Professional}{Dr. Jiang, NCSU}{Raleigh, NC}{}{
-    \begin{itemize}% \itemsep -2pt % reduce space between items
-      \item Developed a framework to interpose advertisement's interaction with webpages.
-      \item Gave presentations on papers and research proposals to the Systems Security group.
+  \cventry{}{Cisco NetFlow Collector and Visualizer}{}{}{}{
+    \begin{itemize}
+      \item Used Python library to generate images of computer networks from NetFlow summaries
     \end{itemize}
   }
-  \cventry{2008--2010}{Jr. Developer/IT Intern}{Futures, Inc.}{Durham, NC}{}{
-    \begin{itemize}%  \itemsep -2pt %reduce space between items
-        \item Aided in the design, and provided the implementation and support of a large scale (10,000+ initial users), Xen-virtualized server environment housing a rich internet web application.
-	      \item Developed a custom continuous integration server that interfaced with our git repositories.
-    \end{itemize}
-  }
-\section{Extra}
-  \cvlistitem{Contributor to open source projects - see \url{https://github.com/mdwrigh2}}
-  \cvlistitem{President of the NCSU Linux User Group}
-  \cvlistitem{Google Student Ambassador}
-  \cvlistitem{Winner of NCSU XCDC}
 \end{document}
