@@ -30,6 +30,9 @@
 % green
 \newif\if@colorgreen\@colorgreenfalse
 \DeclareOption{green}{\@colorgreentrue}
+% calpolygreen
+\newif\if@colorcalpolygreen\@colorcalpolygreenfalse
+\DeclareOption{calpolygreen}{\@colorcalpolygreentrue}
 % red
 \newif\if@colorred\@colorredfalse
 \DeclareOption{red}{\@colorredtrue}
@@ -95,6 +98,12 @@
   \definecolor{sectionrectanglecolor}{RGB}{170,10,40}
   \definecolor{sectiontitlecolor}{RGB}{165,0,30}
   \definecolor{subsectioncolor}{RGB}{165,0,30}\fi
+\if@colorcalpolygreen
+  \definecolor{addresscolor}{RGB}{41,85,26}
+  \definecolor{sectionrectanglecolor}{RGB}{41,85,26}
+  \definecolor{sectiontitlecolor}{RGB}{41,85,26}
+  \definecolor{subsectioncolor}{RGB}{41,85,25}\fi
+
 
 % fonts
 \if@roman
